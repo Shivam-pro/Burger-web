@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body{
+    scroll-behavior: smooth;
+}
+.container{
+    background-color: hsl(34, 100%, 92%);
+    overflow: hidden;
+}
+/*=================== Header ======================*/
+.header{
+    padding: 20px 15%;
+    position: fixed;
+    top: 0;
+    background-color: hsl(34, 100%, 92%);
+    z-index: 20;
+    width: 100%;
+}
+.shadow-header{
+    box-shadow: 0px 4px 16px hsla(22, 100%, 8%, .1);
+}
+.nav-bar{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-burger{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100px;
+}
+.image{
+    height: 34px;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(45, 99%, 55%);
+    border-radius: 5px;
+}
+.image svg{
+    width: 24px;
+}
+.menu-bar{
+    display: none;
+}
+.nav-ul{
+    display: flex;
+    gap: 30px;
+}
+.nav-bar ul li{
+    list-style: none;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: black;
+}
+.underline{
+    position: relative;
+}
+.underline::after{
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    width: 0;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: hsl(45, 99%, 55%);
+}
+.underline:hover::after{
+    width: 60%;
+    transition: 0.3s;
+}
+.close{
+    display: none;
+    position: absolute;
+    font-size: 25px;
+    right: 20px;
+    top: 20px;
+}
+.responsive{
+    display: flex;
+    gap: 30px;
+}
+/*=============== Main ===============*/
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    padding: 0px 15%;
+    padding-top: 80px;
+}
+/*=============== Home ===============*/
+.home_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0px;
+    gap: 70px;
+}
+.home_data{
+    position: relative;
+}
+.home_data h1{
+    font-size: 56px;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 100;
+}
+.home_data p{
+    font-size: 15px;
+    color: rgb(84, 84, 84);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.home_data .sticker-potatoes{
+    position: absolute;
+    width: 40px;
+    bottom: 21px;
+    right: 120px;
+    transform: rotate(20deg);
+    opacity: 0.5;;
+
+}
+.home_data .button{
+    padding: 10px 15px;
+    background-color: hsl(45, 99%, 55%);
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.home_images{
+    position: relative;
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+}
+.ingredient{
+    filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, .2));
+    position: absolute;
+    width: 20%;
+    z-index: 2;
+}
+.home_burger{
+    filter: drop-shadow(0 8px 24px hsla(22, 100%, 8%, .2));
+    width: 80%;
+    z-index: 2;
+}
+.home-dish{
+    width: 90%;
+    position: absolute;
+    bottom: -50px;
+}
+.home-potato-1{
+    left: 10px;
+}
+.home-potato-2{
+    right: -10px;
+    bottom: -60px;
+    rotate: 90deg;
+}
+.home-tomato-1{
+    width: 50px;
+    top: -1rem;
+    right: 11rem;
+}
+.home-tomato-2{
+    width: 50px;
+    left: 10.5rem;
+    bottom: -1.5rem;
+}
+.home-lettuce-1{
+    top: 2.5rem;
+    right: -2rem;
+    transform: scaleX(-1);
+}
+.home-lettuce-2{
+    left: -2rem;
+    bottom: 1rem;
+}
+/*=============== Recipe ===============*/
+.recipe h2{
+    font-family:"Aclonica", sans-serif;
+    margin-bottom: 3rem;
+}
+.recipe_container{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.recipe_image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    left: -60px;
+}
+.recipe_image img{
+    filter: drop-shadow(0 8px 24px hsla(22, 100%, 8%, .2));
+    width: 60%;
+    object-fit: contain;
+}
+.recipe_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+}
+.recipe_card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 10px;
+    width: 75%;
+}
+.recipe_card:nth-child(even) .recipe_box{
+    order: 1;
+}
+.recipe_box{
+    background-color:  hsl(45, 99%, 55%);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+.box_image{
+    filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, .2));
+    width: 70px;
+}
+.recipe_card_info p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+/*=============== Popular ===============*/
+.popular_heading{
+    margin-bottom: 40px;
+    font-family:"Aclonica", sans-serif;
+}
+.popular_title{
+    font-family:"Aclonica", sans-serif;
+    margin-bottom: 10px;
+}
+.popular_container{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+.popular_card{
+    position: relative;
+    background-color: hsl(45, 99%, 55%);
+    border: 4px solid white;
+    border-radius: 20px;
+    height: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    /* align-items: center; */
+}
+.popular_card:hover .popular-image{
+    transform: translateY(-10px);
+}
+.popular-image{
+    filter: drop-shadow(0 4px 16px hsla(22, 100%, 8%, .2));
+    width: 200px;
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    transition: .5s ease-out;
+}
+.popular_price{
+    font-size: 25px;
+    font-family:"Aclonica", sans-serif;
+}
+.popular_button{
+    position: absolute;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+}
+/*=============== Delivary ===============*/
+.delivery_container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.delivery_data{
+    position: relative;
+    /* width: 50%; */
+}
+.delivery_title{
+    margin-bottom: 10px;
+    font-family:"Aclonica", sans-serif;
+    font-size: 30px;
+}
+.delivery_discription{
+    margin-bottom: 50px;
+}
+.delivery_sticker{
+    position: absolute;
+    opacity: 0.5;
+    width: 50px;
+    rotate: 20deg;
+    right: 150px;
+    top: 90px;
+}
+.button{
+    font-family:"Aclonica", sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    background-color: hsl(45, 99%, 55%);
+    border-radius: 20px;
+    transition: .3s;
+}
+.button:hover{
+    box-shadow: 3px 3px 8px 0px #6d6c6c;
+}
+.delivery_image{
+    filter: drop-shadow(0 8px 24px hsla(22, 100%, 8%, .2));
+    width: 50%;
+}
+
+/*=============== Contact ===============*/
+.contact_container{
+    position: relative;
+    background-color: hsl(22, 100%, 8%);
+    border-radius: 3rem;
+    overflow: hidden;
+    padding: 3rem;
+    height: 410px;
+}
+.contact_container h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.contact_title{
+    color: white;
+    font-family:"Aclonica", sans-serif;
+    margin-bottom: 10px;
+}
+.contact_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+.contact_image{
+    width: 80%;
+}
+.contact_img{
+    order: 1;
+    width: 100%;
+}
+.contact_data{
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2,.5fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+    width: 100%;
+    height: 200px;
+    color: white;
+}
+.contact_social{
+    display: flex;
+    gap: 10px;
+}
+.contact_social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: hsl(45, 99%, 55%);
+    text-decoration: none;
+    color: black;
+    border-radius: 7px;
+    transition: .4s;
+}
+.contact_social a:hover{
+    transform: translateY(-10px);
+}
+.contact_info{
+    font-size: 13px;
+}
+.contact_sticker-1, .contact_sticker-2{
+    position: absolute;
+    opacity: 0.5;
+}
+.contact_sticker-1{
+    width: 50px;
+    top: 27%;
+    left: 35%;
+}
+.contact_sticker-2{
+    right: 15%;
+    bottom: 13%;
+    width: 34px;
+}
+/*=============== Footer ===============*/
+.footer{
+    padding-bottom: 50px;
+}
+.footer_container{
+    gap: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-title{
+    font-family:"Aclonica", sans-serif;
+}
+.footer_info{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_info a{
+    text-decoration: none;
+    color: black;
+}
+@media (max-width: 600px) {
+    .menu-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+    }
+    .menu-bar:hover{
+        background-color: rgb(200, 200, 200);
+        border-radius: 50%;
+    }
+    .nav-ul{
+        display: none;
+    }
+    .close{
+        display: block;
+    }
+    .responsive{
+        /* display: flex;
+        gap: 30px; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+        background-color: hsl(34, 100%, 92%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: 20px;
+        padding: 15px;
+        box-shadow: 0px 4px 10px 2px hsl(33, 95%, 78%);
+    }
+    .home_container{
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+    .home_data h1{
+        font-size: 40px;
+    }
+    .home_data p{
+        font-size: 15px;
+    }
+    .home-burger{
+        width: 60%;
+    }
+    .header{
+        padding: 10px;
+    }
+    .section{
+        padding: 10px;
+        padding-top: 70px;
+    }
+    .box_image{
+        width: 50px;
+    }
+    .recipe_card{
+        gap: 10px;
+        width: 100%;
+    }
+    .recipe_box{
+        width: 60px;
+        height: 60px;
+    }
+    .recipe_card_info h3{
+        font-size: 15px;
+    }
+    .recipe_card_info p{
+        margin-top: 4px;
+        font-size: 12px;
+    }
+    .recipe_image img{
+        width: 200px;
+    }
+    /*=============== Popular ===============*/
+    .popular_container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        row-gap: 30px;
+    }
+    .popular_card{
+        width: 100%;
+        height: 250px;
+    }
+    .popular-image{
+        width: 100%;
+        left: 0px;
+        top: -15%;
+    }
+    .popular_button{
+        height: 34px;
+        width: 34px;
+        font-size: 26px;
+    }
+    .popular_price{
+        font-size: 20px;
+    }
+    /*=============== Delivary ===============*/
+    .delivery_container{
+        flex-direction: column;
+    }
+    .delivery_data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .delivery_discription{
+        text-align: center;
+    }
+    .delivery_sticker{
+        width: 30px;
+        right: 10px;
+        top: 125px;
+    }
+    .delivery_image{
+        width: 100%;
+    }
+    /*=============== Contact ===============*/
+    .contact_container{
+        width: 100%;
+        height: 639px;
+        padding: 40px 0px;
+    }
+    .contact_container h2{
+        font-size: 25px;
+    }
+    .contact_content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact_data{
+        width: 100%;
+        justify-content: center;
+        order: 1;
+        text-align: center;
+        grid-template-columns: repeat(1, .5fr);
+    }
+    .contact_social{
+        justify-content: center;
+    }
+    .div{
+        width: 100%;
+    }
+    .contact_image{
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        order: 2;
+    }
+    .contact_img{
+        width: 100%;
+    }
+    .contact_title{
+        width: 100%;
+        font-size: 19px;
+    }
+    .contact_info{
+        font-size: 12px;
+    }
+    .contact_sticker-1{
+        width: 40px;
+        top: 13%;
+        left: 10%;
+    }
+    .contact_sticker-2{
+        bottom: 36%;
+        width: 30px;
+    }
+}
+@media (max-width: 800px) {
+    .header{
+        padding: 20px;
+    }
+    .section{
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 380px){
+    .popular_card{
+        height: 220px;
+    }
+}
+@media (max-width: 330px){
+    .popular_card{
+        height: 200px;
+    }
+}
