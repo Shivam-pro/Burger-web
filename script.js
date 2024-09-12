@@ -4,10 +4,8 @@ let close_btn = document.querySelector(".close");
 let nav_links = document.querySelectorAll(".underline")
 function Open_menu(){
     nav_ul.classList.add('responsive');
-    nav_ul.classList.remove('nav-ul');
 }
 function Close_menu(){
-    nav_ul.classList.add('nav-ul');
     nav_ul.classList.remove('responsive');
 }
 Array.from(nav_links).forEach(e => {
